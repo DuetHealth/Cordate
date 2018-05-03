@@ -1,11 +1,3 @@
-//
-//  Int.swift
-//  Cordate
-//
-//  Created by Ryan Wachowski on 5/3/18.
-//  Copyright © 2018 Duet Health. All rights reserved.
-//
-
 import Foundation
 
 extension Int {
