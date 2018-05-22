@@ -68,6 +68,10 @@ public class CalendarDataSource {
     }
 
     public func monthIsAvailable(_ month: Int, inYear year: Int) -> Bool {
+        if Int.allEqual(year, minimumDate.heart.year, maximumDate.heart.year) {
+            return (minimumDate.heart.month...maximumDate.heart.month).contains(month)
+        }
+
         switch year {
         case minimumDate.heart.year: return month >= minimumDate.heart.month
         case maximumDate.heart.year: return month <= maximumDate.heart.month
@@ -76,6 +80,11 @@ public class CalendarDataSource {
     }
 
     public func dayIsAvailable(_ day: Int, inMonth month: Int, year: Int) -> Bool {
+        if Int.allEqual(year, minimumDate.heart.year, maximumDate.heart.year) &&
+            Int.allEqual(month, minimumDate.heart.month, maximumDate.heart.month) {
+            return (minimumDate.heart.day...maximumDate.heart.day).contains(day)
+        }
+
         switch (month, year) {
         case (minimumDate.heart.month, minimumDate.heart.year): return day >= minimumDate.heart.day
         case (maximumDate.heart.month, maximumDate.heart.year): return day <= maximumDate.heart.day

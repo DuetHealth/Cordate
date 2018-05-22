@@ -33,6 +33,7 @@
 		94B3FD24203544880093F870 /* UICollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94B3FD23203544880093F870 /* UICollectionView.swift */; };
 		94B3FD26203544AA0093F870 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94B3FD25203544AA0093F870 /* UIViewController.swift */; };
 		94B3FD2A203545380093F870 /* CalendarDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94B3FD29203545380093F870 /* CalendarDataSource.swift */; };
+		94E8F8B7209B579200FB9266 /* Int.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E8F8B6209B579200FB9266 /* Int.swift */; };
 		94FBDCCC20522C870057022F /* IndexPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94FBDCCB20522C870057022F /* IndexPath.swift */; };
 		B54E9C861FC356DF000301C6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B54E9C851FC356DF000301C6 /* AppDelegate.swift */; };
 		B54E9C881FC356DF000301C6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B54E9C871FC356DF000301C6 /* ViewController.swift */; };
@@ -113,6 +114,7 @@
 		94B3FD23203544880093F870 /* UICollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionView.swift; sourceTree = "<group>"; };
 		94B3FD25203544AA0093F870 /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 		94B3FD29203545380093F870 /* CalendarDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarDataSource.swift; sourceTree = "<group>"; };
+		94E8F8B6209B579200FB9266 /* Int.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Int.swift; sourceTree = "<group>"; };
 		94FBDCCB20522C870057022F /* IndexPath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndexPath.swift; sourceTree = "<group>"; };
 		99C879DB2847CDB2F83F5336 /* Pods_NengoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NengoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A37E8AB2147CE97846BD052B /* Pods_ChargeCaptureTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ChargeCaptureTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -231,6 +233,7 @@
 				94B3FD212035446E0093F870 /* DateComponents.swift */,
 				94338CAD203681230052AC90 /* DispatchQueue+Once.swift */,
 				94FBDCCB20522C870057022F /* IndexPath.swift */,
+				94E8F8B6209B579200FB9266 /* Int.swift */,
 				9466F0332046358100A161E8 /* NSLayoutConstraint.swift */,
 				945E573B2047BC6100058AB3 /* String.swift */,
 				9466F035204638AC00A161E8 /* UIButton.swift */,
@@ -635,6 +638,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				945E57462049B7A900058AB3 /* Rx+ManualDateField.swift in Sources */,
+				94E8F8B7209B579200FB9266 /* Int.swift in Sources */,
 				94B3FD0B2034FAF50093F870 /* CalendarDateSelectionController.swift in Sources */,
 				94B3FD20203544570093F870 /* Date.swift in Sources */,
 				945E573C2047BC6100058AB3 /* String.swift in Sources */,
