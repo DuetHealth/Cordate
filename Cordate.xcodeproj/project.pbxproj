@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		94338C992036313A0052AC90 /* FadeAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94338C982036313A0052AC90 /* FadeAnimator.swift */; };
 		94338CAC203680DB0052AC90 /* CalendarLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94338CAB203680DB0052AC90 /* CalendarLayout.swift */; };
-		94338CAE203681230052AC90 /* DispatchQueue+Once.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94338CAD203681230052AC90 /* DispatchQueue+Once.swift */; };
 		94338CBC203C76D60052AC90 /* ManualDateField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94338CBB203C76D60052AC90 /* ManualDateField.swift */; };
 		945E57352047B3C900058AB3 /* ManualDateField+Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945E57342047B3C900058AB3 /* ManualDateField+Order.swift */; };
 		945E57372047B42800058AB3 /* ManualDateField+Separator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945E57362047B42800058AB3 /* ManualDateField+Separator.swift */; };
@@ -87,7 +86,6 @@
 		7D9C5B8B7898A064A9BC76C7 /* Pods_CordateTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CordateTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		94338C982036313A0052AC90 /* FadeAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FadeAnimator.swift; sourceTree = "<group>"; };
 		94338CAB203680DB0052AC90 /* CalendarLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarLayout.swift; sourceTree = "<group>"; };
-		94338CAD203681230052AC90 /* DispatchQueue+Once.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DispatchQueue+Once.swift"; sourceTree = "<group>"; };
 		94338CBB203C76D60052AC90 /* ManualDateField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManualDateField.swift; sourceTree = "<group>"; };
 		945E57342047B3C900058AB3 /* ManualDateField+Order.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ManualDateField+Order.swift"; sourceTree = "<group>"; };
 		945E57362047B42800058AB3 /* ManualDateField+Separator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ManualDateField+Separator.swift"; sourceTree = "<group>"; };
@@ -231,7 +229,6 @@
 			children = (
 				94B3FD1F203544570093F870 /* Date.swift */,
 				94B3FD212035446E0093F870 /* DateComponents.swift */,
-				94338CAD203681230052AC90 /* DispatchQueue+Once.swift */,
 				94FBDCCB20522C870057022F /* IndexPath.swift */,
 				94E8F8B6209B579200FB9266 /* Int.swift */,
 				9466F0332046358100A161E8 /* NSLayoutConstraint.swift */,
@@ -642,7 +639,6 @@
 				94B3FD0B2034FAF50093F870 /* CalendarDateSelectionController.swift in Sources */,
 				94B3FD20203544570093F870 /* Date.swift in Sources */,
 				945E573C2047BC6100058AB3 /* String.swift in Sources */,
-				94338CAE203681230052AC90 /* DispatchQueue+Once.swift in Sources */,
 				94B3FD26203544AA0093F870 /* UIViewController.swift in Sources */,
 				94B3FD10203512F80093F870 /* CalendarCell.swift in Sources */,
 				945E57352047B3C900058AB3 /* ManualDateField+Order.swift in Sources */,
