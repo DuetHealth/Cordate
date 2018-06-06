@@ -248,10 +248,10 @@ public class CalendarDateSelectionController: UIViewController {
 
     public override func viewDidLayoutSubviews() {
         if !hasLaidOutOnce {
+            hasLaidOutOnce = true
             calendarLayout.setLayoutProperties(for: currentComponent)
             guard case .year = currentComponent, let index = dataSource.indexOfYear(Date().heart.year) else { return }
             calendarView.scrollToItem(at: IndexPath(item: index, section: 0), at: .centeredVertically, animated: false)
-            hasLaidOutOnce = true
         }
     }
 
