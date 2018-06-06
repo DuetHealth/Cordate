@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4A7D89A9318A81FC9B2F8ABA /* Pods_CordateDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE9ACE2DD587E1FDB7F9DA67 /* Pods_CordateDemo.framework */; };
 		94338C992036313A0052AC90 /* FadeAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94338C982036313A0052AC90 /* FadeAnimator.swift */; };
 		94338CAC203680DB0052AC90 /* CalendarLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94338CAB203680DB0052AC90 /* CalendarLayout.swift */; };
 		94338CBC203C76D60052AC90 /* ManualDateField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94338CBB203C76D60052AC90 /* ManualDateField.swift */; };
@@ -39,6 +40,7 @@
 		B54E9C8D1FC356DF000301C6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B54E9C8C1FC356DF000301C6 /* Assets.xcassets */; };
 		B54E9C901FC356DF000301C6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B54E9C8E1FC356DF000301C6 /* LaunchScreen.storyboard */; };
 		B5AF5B4A1FCCCA04005265F4 /* Cordate.h in Headers */ = {isa = PBXBuildFile; fileRef = B5AF5B491FCCCA04005265F4 /* Cordate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BE99FB028814B9CB5946A0CB /* Pods_CordateTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D9C5B8B7898A064A9BC76C7 /* Pods_CordateTests.framework */; };
 		D37D79C210398C376474C9FA /* Pods_Cordate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD82AEAA53E828942DE2F2EE /* Pods_Cordate.framework */; };
 /* End PBXBuildFile section */
 
@@ -146,6 +148,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE99FB028814B9CB5946A0CB /* Pods_CordateTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -154,6 +157,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				94B3FD1720352B6C0093F870 /* Cordate.framework in Frameworks */,
+				4A7D89A9318A81FC9B2F8ABA /* Pods_CordateDemo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -358,7 +362,6 @@
 				B54E9C611FC356B9000301C6 /* Frameworks */,
 				B54E9C621FC356B9000301C6 /* Headers */,
 				B54E9C631FC356B9000301C6 /* Resources */,
-				CB74AB6DD54E34E2569C56B4 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -378,7 +381,6 @@
 				B54E9C6B1FC356B9000301C6 /* Frameworks */,
 				B54E9C6C1FC356B9000301C6 /* Resources */,
 				547BB0DB7F85A4B15D3C1AE3 /* [CP] Embed Pods Frameworks */,
-				6B07CD676C21A7841BCCD0BA /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -399,7 +401,6 @@
 				B54E9C801FC356DF000301C6 /* Frameworks */,
 				B54E9C811FC356DF000301C6 /* Resources */,
 				05697D9B7287A1CCDE86DC4B /* [CP] Embed Pods Frameworks */,
-				586FF3E1A5F6211AA75DEF05 /* [CP] Copy Pods Resources */,
 				94B3FD1B20352B6C0093F870 /* Embed Frameworks */,
 			);
 			buildRules = (
@@ -546,21 +547,6 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CordateTests/Pods-CordateTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		586FF3E1A5F6211AA75DEF05 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CordateDemo/Pods-CordateDemo-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		623A74480FA877410B4BC40E /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -579,21 +565,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		6B07CD676C21A7841BCCD0BA /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CordateTests/Pods-CordateTests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		C1A244CF0FF8801D454D8339 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -610,21 +581,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		CB74AB6DD54E34E2569C56B4 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Cordate/Pods-Cordate-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -822,6 +778,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 6C616E127E795A9DCCBC4387 /* Pods-Cordate.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
@@ -847,6 +804,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 15EE7B9AD146C0775A8B0E6D /* Pods-Cordate.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
@@ -871,7 +829,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = A88C5CA50640216CFA54C849 /* Pods-CordateTests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
@@ -889,7 +847,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 5C041EDDF9368C1EEF885F37 /* Pods-CordateTests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
@@ -907,7 +865,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 27E0342D23C50CCDA3609118 /* Pods-CordateDemo.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
@@ -924,7 +882,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 13C3D02E5DB1F3CBD8082D49 /* Pods-CordateDemo.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
