@@ -37,7 +37,6 @@ public class CalendarDateSelectionController: UIViewController {
     private let monthButton = UIButton(type: .system)
     private let clearButton = UIButton(type: .system)
     private let confirmButton = UIButton(type: .system)
-    private let initialLayout = OnceToken()
 
     /// The currently-selected date.
     @objc dynamic public var date = Date?.none {
@@ -81,6 +80,10 @@ public class CalendarDateSelectionController: UIViewController {
     }
     
     private var selectedDay = Int?.none
+
+    /// Performs an initial layout pass in viewDidLayoutSubviews which prepares the collection view's
+    /// layout and, if applicable, scrolls to the selected year.
+    private var hasLaidOutOnce = false
 
     public init(dataSource: CalendarDataSource = CalendarDataSource(), title: String? = nil, initialDate: Date? = nil) {
         self.calendarTitle = title
@@ -244,7 +247,8 @@ public class CalendarDateSelectionController: UIViewController {
     }
 
     public override func viewDidLayoutSubviews() {
-        DispatchQueue.main.once(initialLayout.token) {
+        if !hasLaidOutOnce {
+            hasLaidOutOnce = true
             calendarLayout.setLayoutProperties(for: currentComponent)
             guard case .year = currentComponent, let index = dataSource.indexOfYear(Date().heart.year) else { return }
             calendarView.scrollToItem(at: IndexPath(item: index, section: 0), at: .centeredVertically, animated: false)
@@ -268,7 +272,7 @@ public class CalendarDateSelectionController: UIViewController {
         confirmButton.setTitleColor(style.disabledCalendarModeButtonColor, for: .disabled)
         confirmButton.titleLabel?.font = style.calendarModeButtonFont
 
-        calendarHeader.arrangedSubviews.flatMap { $0 as? UILabel }.forEach {
+        calendarHeader.arrangedSubviews.compactMap { $0 as? UILabel }.forEach {
             $0.font = style.calendarHeaderFont
             $0.textColor = style.headerTextColor
         }

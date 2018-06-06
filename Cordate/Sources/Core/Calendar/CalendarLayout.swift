@@ -13,7 +13,7 @@ public class CalendarLayout: UICollectionViewFlowLayout {
     private var lastComponent = CalendarDataSource.Component?.none
 
     func setLayoutProperties(for component: CalendarDataSource.Component) {
-        guard let collectionView = collectionView else { return }
+        guard let collectionView = collectionView, collectionView.bounds.width > 0 && collectionView.bounds.height > 0 else { return }
         lastComponent = component
         let width = collectionView.bounds.width
         let height = collectionView.bounds.height
