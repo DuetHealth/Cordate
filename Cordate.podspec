@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name          = 'Cordate'
-  s.version       = '1.1.0'
+  s.version       = '1.1.1'
   s.license       = 'MIT'
   s.summary       = 'Give dates a special place in your ❤️'
   s.description   = 'Cordate is a small library which makes working with dates much smoother by adding commonly-used extensions, custom UI components, and more.'
