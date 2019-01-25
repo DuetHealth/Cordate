@@ -1,4 +1,3 @@
-source 'git@gitlab.duethealth.com:ios-projects/duet-health-cocoapod-specs.git'
 source 'https://github.com/CocoaPods/Specs.git'
 
 project 'Cordate.xcodeproj'

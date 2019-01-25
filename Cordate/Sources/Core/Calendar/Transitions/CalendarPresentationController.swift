@@ -1,7 +1,7 @@
 import Foundation
 import UIKit
 
-fileprivate let defaultStyle: UIBlurEffectStyle = {
+fileprivate let defaultStyle: UIBlurEffect.Style = {
     if #available(iOS 10.0, *) { return .regular }
     return .light
 }()

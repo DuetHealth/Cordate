@@ -141,7 +141,7 @@ public class ManualDateField: UITextField {
         let paragraphStyle = NSMutableParagraphStyle()
         paragraphStyle.alignment = textAlignment
         let font = self.font ?? .systemFont(ofSize: UIFont.systemFontSize)
-        let baseAttributes: [NSAttributedStringKey : Any] = [NSAttributedStringKey.font: font,
+        let baseAttributes: [NSAttributedString.Key : Any] = [NSAttributedString.Key.font: font,
                                                              .foregroundColor: placeholderColor,
                                                              .paragraphStyle: paragraphStyle]
         let textToDraw = (rawDate ?? "") + formatter.dateFormat.localizedUppercase.dropFirst(rawDate?.count ?? 0)
