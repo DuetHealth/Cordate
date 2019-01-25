@@ -6,9 +6,9 @@ Cordate is a small library which makes working with dates much smoother by addin
 
 ### Installation
 
-Cocoapods: `pod 'Cordate', '~> 1.0'`. See [Cordate.podspec](Cordate.podspec) for more information.
+Cocoapods: `pod 'Cordate', '~> 2.0'`. See [Cordate.podspec](Cordate.podspec) for more information.
 
-Carthage: `github "DuetHealth/Cordate" ~> 1.0 && carthage update`
+Carthage: `github "DuetHealth/Cordate" ~> 2.0 && carthage update`
 
 ## Roadmap
 
