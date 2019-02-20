@@ -40,16 +40,12 @@
 		B54E9C901FC356DF000301C6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B54E9C8E1FC356DF000301C6 /* LaunchScreen.storyboard */; };
 		B559BE4221FAA876004A1E8F /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B559BE4021FAA876004A1E8F /* RxCocoa.framework */; };
 		B559BE4321FAA876004A1E8F /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B559BE4121FAA876004A1E8F /* RxSwift.framework */; };
-		B559BE4721FAA8A0004A1E8F /* RxCocoa.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B559BE4021FAA876004A1E8F /* RxCocoa.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		B559BE4821FAA8A0004A1E8F /* RxSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B559BE4121FAA876004A1E8F /* RxSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B559BE4921FAA8C7004A1E8F /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B559BE4021FAA876004A1E8F /* RxCocoa.framework */; };
 		B559BE4A21FAA8C7004A1E8F /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B559BE4121FAA876004A1E8F /* RxSwift.framework */; };
 		B559BE4B21FAA8D0004A1E8F /* RxCocoa.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B559BE4021FAA876004A1E8F /* RxCocoa.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B559BE4C21FAA8D0004A1E8F /* RxSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B559BE4121FAA876004A1E8F /* RxSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B559BE4F21FAA8E0004A1E8F /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B559BE4D21FAA8E0004A1E8F /* Quick.framework */; };
 		B559BE5021FAA8E0004A1E8F /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B559BE4E21FAA8E0004A1E8F /* Nimble.framework */; };
-		B559BE5321FAA90A004A1E8F /* Nimble.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B559BE4E21FAA8E0004A1E8F /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		B559BE5421FAA90A004A1E8F /* Quick.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B559BE4D21FAA8E0004A1E8F /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B5AF5B4A1FCCCA04005265F4 /* Cordate.h in Headers */ = {isa = PBXBuildFile; fileRef = B5AF5B491FCCCA04005265F4 /* Cordate.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
@@ -80,30 +76,6 @@
 				B559BE4B21FAA8D0004A1E8F /* RxCocoa.framework in Embed Frameworks */,
 				B559BE4C21FAA8D0004A1E8F /* RxSwift.framework in Embed Frameworks */,
 				94B3FD1820352B6C0093F870 /* Cordate.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		B559BE4621FAA884004A1E8F /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				B559BE4721FAA8A0004A1E8F /* RxCocoa.framework in Embed Frameworks */,
-				B559BE4821FAA8A0004A1E8F /* RxSwift.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		B559BE5221FAA8FA004A1E8F /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 7;
-			files = (
-				B559BE5321FAA90A004A1E8F /* Nimble.framework in Embed Frameworks */,
-				B559BE5421FAA90A004A1E8F /* Quick.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -357,7 +329,6 @@
 				B54E9C611FC356B9000301C6 /* Frameworks */,
 				B54E9C621FC356B9000301C6 /* Headers */,
 				B54E9C631FC356B9000301C6 /* Resources */,
-				B559BE4621FAA884004A1E8F /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -375,7 +346,6 @@
 				B54E9C6A1FC356B9000301C6 /* Sources */,
 				B54E9C6B1FC356B9000301C6 /* Frameworks */,
 				B54E9C6C1FC356B9000301C6 /* Resources */,
-				B559BE5221FAA8FA004A1E8F /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -744,7 +714,6 @@
 				PRODUCT_BUNDLE_IDENTIFIER = DHK.ChargeCaptureTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -765,7 +734,6 @@
 				PRODUCT_BUNDLE_IDENTIFIER = DHK.ChargeCaptureTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
