@@ -2,7 +2,7 @@ import Foundation
 
 public extension ManualDateField {
 
-    public struct Order {
+    struct Order {
         public static let dayMonthYear = Order((.day, .month, .year))
         public static let monthDayYear = Order((.month, .day, .year))
         public static let yearDayMonth = Order((.year, .day, .month))

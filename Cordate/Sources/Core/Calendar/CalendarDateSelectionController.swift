@@ -299,7 +299,7 @@ public class CalendarDateSelectionController: UIViewController {
             UIView.animate(withDuration: 0, animations: {
                 self.calendarLayout.setLayoutProperties(for: self.currentComponent)
                 self.calendarView.reloadData()
-                guard case .year = self.currentComponent, let year = self.selectedYear else {
+                guard case .year = self.currentComponent, self.selectedYear != nil else {
                     switch self.currentComponent {
                     case .year where self.selectedYear == nil:
                             if let indexPath = self.dataSource.indexOfYear(Date().heart.year).map({ IndexPath(item: $0, section: 0) }) {
