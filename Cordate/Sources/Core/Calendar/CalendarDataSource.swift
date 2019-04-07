@@ -102,7 +102,7 @@ public class CalendarDataSource {
     }
 
     public func indexOfYear(_ year: Int) -> Int? {
-        return Array(years).index(of: year)
+        return Array(years).firstIndex(of: year)
     }
 
     public func stringFromYear(_ year: Int) -> String {

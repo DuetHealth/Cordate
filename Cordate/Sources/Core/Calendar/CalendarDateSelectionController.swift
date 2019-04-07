@@ -48,7 +48,7 @@ public class CalendarDateSelectionController: UIViewController {
         didSet { applyStyle() }
     }
 
-    public lazy override var presentationController: UIPresentationController? = {
+    public lazy var calendarPresentationController: UIPresentationController? = {
         return CalendarPresentationController(presentedViewController: self, presenting: nil)
     }()
 
@@ -481,7 +481,7 @@ extension CalendarDateSelectionController: UICollectionViewDelegate {
 extension CalendarDateSelectionController: UIViewControllerTransitioningDelegate {
 
     public func presentationController(forPresented presented: UIViewController, presenting: UIViewController?, source: UIViewController) -> UIPresentationController? {
-        return presentationController
+        return calendarPresentationController
     }
 
     public func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
