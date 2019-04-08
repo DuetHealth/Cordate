@@ -76,6 +76,7 @@ extension ViewController: CalendarDateSelectionControllerDelegate {
     func calendarController(_ controller: CalendarDateSelectionController, didSelectDate date: Date) {
         self.date = date
         label.text = "You selected \(dateFormatter.string(from: date))"
+        dismiss(animated: true)
     }
 
 }
