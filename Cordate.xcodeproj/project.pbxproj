@@ -3,10 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 48;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1E05E3992416AECC0023B1B5 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 1E05E3982416AECC0023B1B5 /* RxCocoa */; };
+		1E05E39B2416AECC0023B1B5 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 1E05E39A2416AECC0023B1B5 /* RxSwift */; };
 		94338C992036313A0052AC90 /* FadeAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94338C982036313A0052AC90 /* FadeAnimator.swift */; };
 		94338CAC203680DB0052AC90 /* CalendarLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94338CAB203680DB0052AC90 /* CalendarLayout.swift */; };
 		94338CBC203C76D60052AC90 /* ManualDateField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94338CBB203C76D60052AC90 /* ManualDateField.swift */; };
@@ -38,15 +40,6 @@
 		B54E9C881FC356DF000301C6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B54E9C871FC356DF000301C6 /* ViewController.swift */; };
 		B54E9C8D1FC356DF000301C6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B54E9C8C1FC356DF000301C6 /* Assets.xcassets */; };
 		B54E9C901FC356DF000301C6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B54E9C8E1FC356DF000301C6 /* LaunchScreen.storyboard */; };
-		B559BE4221FAA876004A1E8F /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B559BE4021FAA876004A1E8F /* RxCocoa.framework */; };
-		B559BE4321FAA876004A1E8F /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B559BE4121FAA876004A1E8F /* RxSwift.framework */; };
-		B559BE4921FAA8C7004A1E8F /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B559BE4021FAA876004A1E8F /* RxCocoa.framework */; };
-		B559BE4A21FAA8C7004A1E8F /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B559BE4121FAA876004A1E8F /* RxSwift.framework */; };
-		B559BE4B21FAA8D0004A1E8F /* RxCocoa.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B559BE4021FAA876004A1E8F /* RxCocoa.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		B559BE4C21FAA8D0004A1E8F /* RxSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B559BE4121FAA876004A1E8F /* RxSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		B559BE4F21FAA8E0004A1E8F /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B559BE4D21FAA8E0004A1E8F /* Quick.framework */; };
-		B559BE5021FAA8E0004A1E8F /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B559BE4E21FAA8E0004A1E8F /* Nimble.framework */; };
-		B5AF5B4A1FCCCA04005265F4 /* Cordate.h in Headers */ = {isa = PBXBuildFile; fileRef = B5AF5B491FCCCA04005265F4 /* Cordate.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,13 +50,6 @@
 			remoteGlobalIDString = B54E9C641FC356B9000301C6;
 			remoteInfo = Nengo;
 		};
-		B54E9C701FC356B9000301C6 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = B54E9C5C1FC356B9000301C6 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = B54E9C641FC356B9000301C6;
-			remoteInfo = ChargeCapture;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -73,8 +59,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				B559BE4B21FAA8D0004A1E8F /* RxCocoa.framework in Embed Frameworks */,
-				B559BE4C21FAA8D0004A1E8F /* RxSwift.framework in Embed Frameworks */,
 				94B3FD1820352B6C0093F870 /* Cordate.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -99,7 +83,6 @@
 		948F1E8D202CB1C300DB978C /* Cordate.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Cordate.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		94910E8F2044BDAE000E13E5 /* CalendarStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarStyle.swift; sourceTree = "<group>"; };
 		94B3FD082034F8650093F870 /* CordateDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CordateDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		94B3FD092034F8650093F870 /* CordateTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CordateTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		94B3FD0A2034FAF50093F870 /* CalendarDateSelectionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarDateSelectionController.swift; sourceTree = "<group>"; };
 		94B3FD0C2034FB0E0093F870 /* CalendarPresentationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarPresentationController.swift; sourceTree = "<group>"; };
 		94B3FD0F203512F80093F870 /* CalendarCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarCell.swift; sourceTree = "<group>"; };
@@ -112,17 +95,11 @@
 		94E8F8B6209B579200FB9266 /* Int.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Int.swift; sourceTree = "<group>"; };
 		94FBDCCB20522C870057022F /* IndexPath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndexPath.swift; sourceTree = "<group>"; };
 		B54E9C691FC356B9000301C6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B54E9C751FC356B9000301C6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B54E9C851FC356DF000301C6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B54E9C871FC356DF000301C6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		B54E9C8C1FC356DF000301C6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B54E9C8F1FC356DF000301C6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B54E9C911FC356E0000301C6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B559BE4021FAA876004A1E8F /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
-		B559BE4121FAA876004A1E8F /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
-		B559BE4D21FAA8E0004A1E8F /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
-		B559BE4E21FAA8E0004A1E8F /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
-		B5AF5B491FCCCA04005265F4 /* Cordate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Cordate.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,17 +107,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B559BE4221FAA876004A1E8F /* RxCocoa.framework in Frameworks */,
-				B559BE4321FAA876004A1E8F /* RxSwift.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		B54E9C6B1FC356B9000301C6 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				B559BE4F21FAA8E0004A1E8F /* Quick.framework in Frameworks */,
-				B559BE5021FAA8E0004A1E8F /* Nimble.framework in Frameworks */,
+				1E05E39B2416AECC0023B1B5 /* RxSwift in Frameworks */,
+				1E05E3992416AECC0023B1B5 /* RxCocoa in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -149,8 +117,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				94B3FD1720352B6C0093F870 /* Cordate.framework in Frameworks */,
-				B559BE4921FAA8C7004A1E8F /* RxCocoa.framework in Frameworks */,
-				B559BE4A21FAA8C7004A1E8F /* RxSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -246,7 +212,6 @@
 		94B3FD28203545180093F870 /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				B5AF5B491FCCCA04005265F4 /* Cordate.h */,
 				94338CBA203C76A80052AC90 /* Calendar */,
 				9466F02A20461E6800A161E8 /* Controls */,
 				94B3FD1E2035444D0093F870 /* Extensions */,
@@ -258,12 +223,9 @@
 			isa = PBXGroup;
 			children = (
 				B54E9C671FC356B9000301C6 /* Cordate */,
-				B54E9C721FC356B9000301C6 /* CordateTests */,
 				B54E9C841FC356DF000301C6 /* CordateDemo */,
 				948F1E8D202CB1C300DB978C /* Cordate.framework */,
 				94B3FD082034F8650093F870 /* CordateDemo.app */,
-				94B3FD092034F8650093F870 /* CordateTests.xctest */,
-				B559BE3F21FAA876004A1E8F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -274,14 +236,6 @@
 				B54E9C691FC356B9000301C6 /* Info.plist */,
 			);
 			path = Cordate;
-			sourceTree = "<group>";
-		};
-		B54E9C721FC356B9000301C6 /* CordateTests */ = {
-			isa = PBXGroup;
-			children = (
-				B54E9C751FC356B9000301C6 /* Info.plist */,
-			);
-			path = CordateTests;
 			sourceTree = "<group>";
 		};
 		B54E9C841FC356DF000301C6 /* CordateDemo */ = {
@@ -296,17 +250,6 @@
 			path = CordateDemo;
 			sourceTree = "<group>";
 		};
-		B559BE3F21FAA876004A1E8F /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				B559BE4E21FAA8E0004A1E8F /* Nimble.framework */,
-				B559BE4D21FAA8E0004A1E8F /* Quick.framework */,
-				B559BE4021FAA876004A1E8F /* RxCocoa.framework */,
-				B559BE4121FAA876004A1E8F /* RxSwift.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -314,7 +257,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B5AF5B4A1FCCCA04005265F4 /* Cordate.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -335,27 +277,13 @@
 			dependencies = (
 			);
 			name = Cordate;
+			packageProductDependencies = (
+				1E05E3982416AECC0023B1B5 /* RxCocoa */,
+				1E05E39A2416AECC0023B1B5 /* RxSwift */,
+			);
 			productName = ChargeCapture;
 			productReference = 948F1E8D202CB1C300DB978C /* Cordate.framework */;
 			productType = "com.apple.product-type.framework";
-		};
-		B54E9C6D1FC356B9000301C6 /* CordateTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = B54E9C7C1FC356B9000301C6 /* Build configuration list for PBXNativeTarget "CordateTests" */;
-			buildPhases = (
-				B54E9C6A1FC356B9000301C6 /* Sources */,
-				B54E9C6B1FC356B9000301C6 /* Frameworks */,
-				B54E9C6C1FC356B9000301C6 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				B54E9C711FC356B9000301C6 /* PBXTargetDependency */,
-			);
-			name = CordateTests;
-			productName = ChargeCaptureTests;
-			productReference = 94B3FD092034F8650093F870 /* CordateTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		B54E9C821FC356DF000301C6 /* CordateDemo */ = {
 			isa = PBXNativeTarget;
@@ -391,10 +319,6 @@
 						LastSwiftMigration = 1020;
 						ProvisioningStyle = Automatic;
 					};
-					B54E9C6D1FC356B9000301C6 = {
-						CreatedOnToolsVersion = 9.1;
-						ProvisioningStyle = Automatic;
-					};
 					B54E9C821FC356DF000301C6 = {
 						CreatedOnToolsVersion = 9.1;
 						LastSwiftMigration = 1020;
@@ -411,26 +335,21 @@
 				Base,
 			);
 			mainGroup = B54E9C5B1FC356B9000301C6;
+			packageReferences = (
+				1E05E3972416AECC0023B1B5 /* XCRemoteSwiftPackageReference "RxSwift" */,
+			);
 			productRefGroup = B54E9C5B1FC356B9000301C6;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				B54E9C641FC356B9000301C6 /* Cordate */,
 				B54E9C821FC356DF000301C6 /* CordateDemo */,
-				B54E9C6D1FC356B9000301C6 /* CordateTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		B54E9C631FC356B9000301C6 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		B54E9C6C1FC356B9000301C6 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -481,13 +400,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B54E9C6A1FC356B9000301C6 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		B54E9C7F1FC356DF000301C6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -504,11 +416,6 @@
 			isa = PBXTargetDependency;
 			target = B54E9C641FC356B9000301C6 /* Cordate */;
 			targetProxy = 94B3FD1920352B6C0093F870 /* PBXContainerItemProxy */;
-		};
-		B54E9C711FC356B9000301C6 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = B54E9C641FC356B9000301C6 /* Cordate */;
-			targetProxy = B54E9C701FC356B9000301C6 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -634,7 +541,8 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -654,13 +562,14 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_BITCODE = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/iOS",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "$(SRCROOT)/Cordate/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.duet.cordate;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
@@ -683,57 +592,18 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_BITCODE = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/iOS",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "$(SRCROOT)/Cordate/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.duet.cordate;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
-		B54E9C7D1FC356B9000301C6 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/iOS",
-				);
-				INFOPLIST_FILE = CordateTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = DHK.ChargeCaptureTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		B54E9C7E1FC356B9000301C6 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/iOS",
-				);
-				INFOPLIST_FILE = CordateTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = DHK.ChargeCaptureTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -750,7 +620,10 @@
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/CordateDemo/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.cordate.demo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -770,7 +643,10 @@
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/CordateDemo/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.cordate.demo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -799,15 +675,6 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B54E9C7C1FC356B9000301C6 /* Build configuration list for PBXNativeTarget "CordateTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				B54E9C7D1FC356B9000301C6 /* Debug */,
-				B54E9C7E1FC356B9000301C6 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		B54E9C921FC356E0000301C6 /* Build configuration list for PBXNativeTarget "CordateDemo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -818,6 +685,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		1E05E3972416AECC0023B1B5 /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.1.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		1E05E3982416AECC0023B1B5 /* RxCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1E05E3972416AECC0023B1B5 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxCocoa;
+		};
+		1E05E39A2416AECC0023B1B5 /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1E05E3972416AECC0023B1B5 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = B54E9C5C1FC356B9000301C6 /* Project object */;
 }
