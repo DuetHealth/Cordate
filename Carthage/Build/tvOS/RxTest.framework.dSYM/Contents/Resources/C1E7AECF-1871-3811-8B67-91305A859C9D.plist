@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>DBGArchitecture</key>
+	<string>x86_64</string>
+	<key>DBGBuildSourcePath</key>
+	<string>/Users/freak4pc/Work/OSS/RxSwift</string>
+	<key>DBGDSYMPath</key>
+	<string>/Users/kevinli/dev/Cordate/Carthage/Build/tvOS/RxTest.framework.dSYM/Contents/Resources/DWARF/RxTest</string>
+	<key>DBGSourcePath</key>
+	<string>/Users/kevinli/dev/Cordate/Carthage/Checkouts/RxSwift</string>
+	<key>DBGSymbolRichExecutable</key>
+	<string>/Users/kevinli/dev/Cordate/Carthage/Build/tvOS/RxTest.framework/RxTest</string>
+</dict>
+</plist>
