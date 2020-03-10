@@ -23,3 +23,6 @@ Pods
 report.xml
 fastlane/test_output
 fastlane/README.md
+Carthage/Build/
+Carthage/Checkouts/
+.build/
