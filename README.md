@@ -6,6 +6,23 @@ Cordate is a small library which makes working with dates much smoother by addin
 
 ### Installation
 
+Swift Package Manager: 
+```
+// swift-tools-version:5.0
+
+import PackageDescription
+
+let package = Package(
+  name: "CordateTestProject",
+  dependencies: [
+    .package(url: "https://github.com/DuetHealth/Cordate.git", from: "3.0.1")
+  ],
+  targets: [
+    .target(name: "CordateTestProject", dependencies: ["Cordate"])
+  ]
+)
+```
+
 Cocoapods: `pod 'Cordate', '~> 3.0'`. See [Cordate.podspec](Cordate.podspec) for more information.
 
 Carthage: `github "DuetHealth/Cordate" ~> 3.0 && carthage update`
