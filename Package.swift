@@ -4,7 +4,7 @@ import PackageDescription
 
 let package = Package(
     name: "Cordate",
-    platforms: [.iOS(.v12)],
+    platforms: [.iOS(.v9)],
     products: [
         .library(
             name: "Cordate",
