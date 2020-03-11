@@ -67,6 +67,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		1E85DDD624193591009B27E5 /* Cordate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Cordate.h; sourceTree = "<group>"; };
 		94338C982036313A0052AC90 /* FadeAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FadeAnimator.swift; sourceTree = "<group>"; };
 		94338CAB203680DB0052AC90 /* CalendarLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarLayout.swift; sourceTree = "<group>"; };
 		94338CBB203C76D60052AC90 /* ManualDateField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManualDateField.swift; sourceTree = "<group>"; };
@@ -212,6 +213,7 @@
 		94B3FD28203545180093F870 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				1E85DDD624193591009B27E5 /* Cordate.h */,
 				94338CBA203C76A80052AC90 /* Calendar */,
 				9466F02A20461E6800A161E8 /* Controls */,
 				94B3FD1E2035444D0093F870 /* Extensions */,
