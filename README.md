@@ -1,3 +1,5 @@
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) [![Swift Package Manager](https://github.com/DuetHealth/Cordate/workflows/Swift%20Package%20Manager/badge.svg)](https://github.com/DuetHealth/Cordate/actions?query=workflow%3A%22Swift+Package+Manager%22) [![Carthage](https://github.com/DuetHealth/Cordate/workflows/Carthage/badge.svg)](https://github.com/DuetHealth/Cordate/actions?query=workflow%3ACarthage) [![Cocoapods](https://github.com/DuetHealth/Cordate/workflows/Cocoapods/badge.svg)](https://github.com/DuetHealth/Cordate/actions?query=workflow%3ACocoapods)
+
 # Cordate
 
 Cordate is a small library which makes working with dates much smoother by adding commonly-used extensions, custom UI components, and more.
