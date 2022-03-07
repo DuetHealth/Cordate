@@ -11,7 +11,7 @@ let package = Package(
             targets: ["Cordate"]),
     ],
     dependencies: [
-        .package(url: "https://github.com/ReactiveX/RxSwift.git", .upToNextMajor(from: "6.5.0"))
+        .package(url: "https://github.com/ReactiveX/RxSwift.git", .exact("5.1.3"))
     ],
     targets: [
         .target(

@@ -7,10 +7,10 @@ Pod::Spec.new do |s|
   s.author        = 'Duet Health'
   s.source        = { git: 'https://github.com/DuetHealth/Cordate.git', tag: s.version }
   s.homepage      = s.source[:git]
-  s.ios.deployment_target = '9.0'
+  s.ios.deployment_target = '12.0'
   s.requires_arc  = true
   s.default_subspec = 'Core'
-  s.swift_version = '5.0'
+  s.swift_version = '5.5'
 
   s.subspec 'Core' do |core|
     core.source_files = 'Cordate/Sources/Core/**/*.{h,m,swift}'
