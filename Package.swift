@@ -4,14 +4,14 @@ import PackageDescription
 
 let package = Package(
     name: "Cordate",
-    platforms: [.iOS(.v9)],
+    platforms: [.iOS(.v12)],
     products: [
         .library(
             name: "Cordate",
             targets: ["Cordate"]),
     ],
     dependencies: [
-        .package(url: "https://github.com/ReactiveX/RxSwift.git", from: "5.0.0")
+        .package(url: "https://github.com/ReactiveX/RxSwift.git", .exact("5.1.3"))
     ],
     targets: [
         .target(
