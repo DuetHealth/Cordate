@@ -15,7 +15,7 @@ import PackageDescription
 let package = Package(
   name: "CordateTestProject",
   dependencies: [
-    .package(url: "https://github.com/DuetHealth/Cordate.git", from: "3.0.1")
+    .package(url: "https://github.com/DuetHealth/Cordate.git", from: "3.0.3")
   ],
   targets: [
     .target(name: "CordateTestProject", dependencies: ["Cordate"])
