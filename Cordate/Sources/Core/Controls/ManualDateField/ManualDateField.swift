@@ -106,7 +106,7 @@ public class ManualDateField: UITextField {
         return .zero
     }
 
-    public override func copy() -> Any {
+    @MainActor public override func copy() -> Any {
         return text.map { formatText($0) } ?? ""
     }
 
