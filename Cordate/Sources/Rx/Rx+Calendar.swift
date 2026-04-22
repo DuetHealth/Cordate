@@ -15,24 +15,26 @@ public extension Reactive where Base: CalendarDateSelectionController {
     }
 
     var selectedDate: ControlEvent<Date> {
-        let proxy = base.delegate as? CalendarDelegateProxy ?? installProxy()
+        let proxy = MainActor.assumeIsolated { base.delegate as? CalendarDelegateProxy } ?? installProxy()
         let source = proxy.rx.methodInvoked(#selector(CalendarDateSelectionControllerDelegate.calendarController(_:didSelectDate:)))
             .map { args in args[1] as! Date }
         return ControlEvent(events: source)
     }
 
     var clearedDate: ControlEvent<Void> {
-        let proxy = base.delegate as? CalendarDelegateProxy ?? installProxy()
+        let proxy = MainActor.assumeIsolated { base.delegate as? CalendarDelegateProxy } ?? installProxy()
         let source = proxy.rx.methodInvoked(#selector(CalendarDateSelectionControllerDelegate.calendarControllerClearedDate(_:)))
             .map { _ in () }
         return ControlEvent(events: source)
     }
 
     private func installProxy() -> CalendarDelegateProxy {
-        let proxy = CalendarDelegateProxy(forwardedDelegate: base.delegate)
-        base.delegate = proxy
-        objc_setAssociatedObject(base, &delegateProxyKey, proxy, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
-        return proxy
+        return MainActor.assumeIsolated {
+            let proxy = CalendarDelegateProxy(forwardedDelegate: base.delegate)
+            base.delegate = proxy
+            objc_setAssociatedObject(base, &delegateProxyKey, proxy, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
+            return proxy
+        }
     }
 
 }
