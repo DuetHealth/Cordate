@@ -106,9 +106,12 @@ public class ManualDateField: UITextField {
         return .zero
     }
 
-    @MainActor public override func copy() -> Any {
-        return text.map { formatText($0) } ?? ""
+    public override func copy() -> Any {
+        MainActor.assumeIsolated { text.map { formatText($0) } ?? "" }
     }
+
+
+
 
     public override func drawText(in rect: CGRect) {
         let drawingRepresentation = generateDrawingRepresentation()
