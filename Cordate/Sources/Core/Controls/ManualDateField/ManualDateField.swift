@@ -107,7 +107,7 @@ public class ManualDateField: UITextField {
     }
 
     public override func copy() -> Any {
-        return text.map(formatText) ?? ""
+        return text.map { formatText($0) } ?? ""
     }
 
     public override func drawText(in rect: CGRect) {

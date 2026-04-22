@@ -1,12 +1,12 @@
 import Foundation
-import RxCocoa
-import RxSwift
+@preconcurrency import RxCocoa
+@preconcurrency import RxSwift
 
-fileprivate var delegateProxyKey = UInt8.max
+nonisolated(unsafe) fileprivate var delegateProxyKey = UInt8.max
 
+@MainActor
 public extension Reactive where Base: CalendarDateSelectionController {
 
-    /// Returns a sequence which emits changes to the selected date.
     var date: ControlEvent<Date?> {
         let source = observe(Date?.self, #keyPath(CalendarDateSelectionController.date))
             .filter { $0 != nil }
@@ -14,7 +14,6 @@ public extension Reactive where Base: CalendarDateSelectionController {
         return ControlEvent(events: source)
     }
 
-    /// Returns a sequence which emits explicit confirmations of the selected date.
     var selectedDate: ControlEvent<Date> {
         let proxy = base.delegate as? CalendarDelegateProxy ?? installProxy()
         let source = proxy.rx.methodInvoked(#selector(CalendarDateSelectionControllerDelegate.calendarController(_:didSelectDate:)))
@@ -22,7 +21,6 @@ public extension Reactive where Base: CalendarDateSelectionController {
         return ControlEvent(events: source)
     }
 
-    /// Returns a sequence which emits explicit removals of the selected date.
     var clearedDate: ControlEvent<Void> {
         let proxy = base.delegate as? CalendarDelegateProxy ?? installProxy()
         let source = proxy.rx.methodInvoked(#selector(CalendarDateSelectionControllerDelegate.calendarControllerClearedDate(_:)))
@@ -39,6 +37,7 @@ public extension Reactive where Base: CalendarDateSelectionController {
 
 }
 
+@MainActor
 fileprivate class CalendarDelegateProxy: NSObject, CalendarDateSelectionControllerDelegate {
 
     weak var forwardedDelegate: CalendarDateSelectionControllerDelegate?

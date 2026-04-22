@@ -1,16 +1,9 @@
 import Foundation
 import UIKit
 
-/// Adopters of the 'CalendarDateSelectionControllerDelegate` respond to events triggered by user
-/// interaction with the calendar.
 @objc public protocol CalendarDateSelectionControllerDelegate: UICollectionViewDelegate {
-
-    /// Called by the calendar when a user cleared the date.
     @objc optional func calendarControllerClearedDate(_ controller: CalendarDateSelectionController)
-
-    /// Called by calendar when a user selects a date.
     @objc optional func calendarController(_ controller: CalendarDateSelectionController, didSelectDate date: Date)
-
 }
 
 public class CalendarDateSelectionController: UIViewController {
@@ -19,16 +12,9 @@ public class CalendarDateSelectionController: UIViewController {
 
     private static let reuseIdentifier = "com.Cordate.calendar"
 
-    /// Returns the title shown at the top of the calendar.
     public let calendarTitle: String?
-
-    /// Returns the data source driving the calendar.
     public let dataSource: CalendarDataSource
-
-    /// Returns the view which renders the calendar components.
     public let calendarView: UICollectionView
-
-    /// Returns the layout object which drives the calendar layout.
     public let calendarLayout = CalendarLayout()
 
     private let titleLabel = UILabel()
@@ -38,12 +24,10 @@ public class CalendarDateSelectionController: UIViewController {
     private let clearButton = UIButton(type: .system)
     private let confirmButton = UIButton(type: .system)
 
-    /// The currently-selected date.
     @objc dynamic public var date = Date?.none {
         didSet { confirmButton.isEnabled = date != nil }
     }
 
-    /// The style collection for the calendar.
     public var style = CalendarStyle() {
         didSet { applyStyle() }
     }
@@ -52,7 +36,6 @@ public class CalendarDateSelectionController: UIViewController {
         return CalendarPresentationController(presentedViewController: self, presenting: nil)
     }()
 
-    /// The delegate which receives events from the calendar.
     public weak var delegate = CalendarDateSelectionControllerDelegate?.none
 
     private var currentComponent = CalendarDataSource.Component.year {
@@ -78,11 +61,9 @@ public class CalendarDateSelectionController: UIViewController {
     private var selectedMonth = Int?.none {
         didSet { selectedDay = nil }
     }
-    
+
     private var selectedDay = Int?.none
 
-    /// Performs an initial layout pass in viewDidLayoutSubviews which prepares the collection view's
-    /// layout and, if applicable, scrolls to the selected year.
     private var hasLaidOutOnce = false
 
     public init(dataSource: CalendarDataSource = CalendarDataSource(), title: String? = nil, initialDate: Date? = nil) {
@@ -290,8 +271,6 @@ public class CalendarDateSelectionController: UIViewController {
     }
 
     private func triggerReload() {
-        // TODO : Determine how to set the content offset or scroll to an item as part of an animated
-        // reload. The content offset/item to scroll to needs set up prior to animating the cells.
         UIView.animate(withDuration: 0.2, animations: {
             self.calendarView.alpha = 0
             self.calendarHeader.alpha = 0
@@ -399,7 +378,7 @@ extension CalendarDateSelectionController: UICollectionViewDelegate {
     }
 
     public func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let generator = SelectionFeedbackGenerator()
+        let generator = UISelectionFeedbackGenerator()
         generator.prepare()
         switch currentComponent {
         case .year:
@@ -412,8 +391,6 @@ extension CalendarDateSelectionController: UICollectionViewDelegate {
             currentComponent = .month(year: selectedYear!)
             generator.selectionChanged()
             guard let selectedCell: ComponentCell = collectionView.cell(for: indexPath) else {
-                // This and the other similar cases should never happen for obvious reasons, but in
-                // the event that it does this will ensure that usability isn't totally hampered.
                 triggerReload()
                 return
             }
@@ -496,28 +473,4 @@ extension CalendarDateSelectionController: UIViewControllerTransitioningDelegate
 
 fileprivate func warn(_ message: String, _ function: String = #function, _ line: Int = #line) {
     print("\(CalendarDateSelectionController.self).\(function):\(line) WARN - \(message).")
-}
-
-fileprivate struct SelectionFeedbackGenerator {
-
-    private let generator: Any?
-
-    init() {
-        if #available(iOS 10.0, *) {
-            generator = UISelectionFeedbackGenerator()
-        } else { generator = nil }
-    }
-
-    func prepare() {
-        if #available(iOS 10.0, *) {
-            (generator as? UISelectionFeedbackGenerator)?.prepare()
-        }
-    }
-
-    func selectionChanged() {
-        if #available(iOS 10.0, *) {
-            (generator as? UISelectionFeedbackGenerator)?.selectionChanged()
-        }
-    }
-
 }

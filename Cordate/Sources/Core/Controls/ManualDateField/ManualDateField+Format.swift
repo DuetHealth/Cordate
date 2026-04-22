@@ -2,17 +2,17 @@ import Foundation
 
 public extension ManualDateField {
     
-    struct Format {
+    struct Format: Sendable {
         
-        enum Day: String {
+        enum Day: String, Sendable {
             case `default` = "dd"
         }
         
-        enum Month: String {
+        enum Month: String, Sendable {
             case `default` = "MM"
         }
         
-        public enum Year: String {
+        public enum Year: String, Sendable {
             case short = "yy"
             case long = "yyyy"
         }
@@ -41,4 +41,3 @@ public extension ManualDateField {
     }
     
 }
-

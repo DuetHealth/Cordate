@@ -3,7 +3,7 @@ import UIKit
 
 public class CalendarLayout: UICollectionViewFlowLayout {
 
-    public enum AnimationStyle {
+    public enum AnimationStyle: Sendable {
         case simple
         case detailed
     }
