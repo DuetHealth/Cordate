@@ -2,6 +2,7 @@ import Foundation
 @preconcurrency import RxCocoa
 @preconcurrency import RxSwift
 
+@MainActor
 public extension Reactive where Base: ManualDateField {
 
     var date: ControlProperty<Date?> {
