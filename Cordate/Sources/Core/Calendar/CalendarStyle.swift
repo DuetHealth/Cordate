@@ -19,24 +19,65 @@ public struct CalendarStyle: Sendable {
         return .white
     }
 
+    /// Drives which buttons are shown on the calendar.
     public enum ButtonConfiguration: Sendable {
+
+        /// The calendar shows no buttons and produces values continuously.
         case none
+
+        /// The calendar shows a confirmation button and only produces a value when it is pressed.
         case confirmationOnly
+
+        /// The calendar shows both a confirmation button and a clear button.
         case all
+
     }
 
+    /// The background color for unselected date components.
     public var unselectedBackgroundColor = UIColor(white: 0.95, alpha: 1)
+
+    /// The text color for unselected date components.
+    ///
+    /// When this value is `nil`, the calendar will choose either white or black text depending on
+    /// the intensity of the current background color.
     public var unselectedTextColor = UIColor?.none
+
+    /// The text color for selected date components.
+    ///
+    /// When this value is `nil`, the calendar will choose either white or black text depending on
+    /// the intensity of the current background color.
     public var selectedTextColor = UIColor?.none
+
+    /// The background color for selected date components.
+    ///
+    /// When this value is `nil`, the calendar will use its view's tint color.
     public var selectedBackgroundColor = UIColor?.none
+
+    /// The text color for the day-mode header.
     public var headerTextColor = UIColor.black
+
+    /// The tint color for the calendar mode buttons in the enabled state.
+    ///
+    /// When this value is `nil`, the calendar will use its view's tint color.
     public var enabledCalendarModeButtonColor = UIColor?.none
+
+    /// The tint color for the calendar mode buttons in the disabled state.
     public var disabledCalendarModeButtonColor = UIColor(white: 0.9, alpha: 1)
+
+    /// The font for the calendar mode buttons.
     public var calendarModeButtonFont = UIFont.boldSystemFont(ofSize: 16)
+
     public var titleFont = UIFont.boldSystemFont(ofSize: 18)
+
     public var calendarHeaderFont = UIFont.boldSystemFont(ofSize: 14)
+
+    /// The font for the calendar controls.
     public var calendarFont = UIFont.systemFont(ofSize: UIFont.systemFontSize)
+
+    /// Controls whether selection events trigger haptic feedback.
     public var usesHaptics: Bool = true
+
+    /// Controls which controls are provided by the calendar.
     public var buttonConfiguration = ButtonConfiguration.all
 
     public init() { }

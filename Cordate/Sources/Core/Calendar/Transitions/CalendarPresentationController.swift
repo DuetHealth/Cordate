@@ -1,13 +1,19 @@
 import Foundation
 import UIKit
 
+/// The `CalendarPresentationController` class is a subclass of `UIPresentationController` which
+/// provides default behaviors and styling for the `CalendarDateSelectionController`.
 public class CalendarPresentationController: UIPresentationController {
 
     private let blurEffectView = UIVisualEffectView()
     private let tapGestureRecognizer = UITapGestureRecognizer()
 
+    /// The blur effect used by the overlay.
     public var blurEffect = UIBlurEffect(style: .regular)
 
+    /// Controls whether touches on the blur overlay trigger a dismissal.
+    ///
+    /// The default value of this is `true`.
     public var overlayTouchesShouldDismiss: Bool = true {
         didSet {
             tapGestureRecognizer.isEnabled = overlayTouchesShouldDismiss

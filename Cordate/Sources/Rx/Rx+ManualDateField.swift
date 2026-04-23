@@ -1,10 +1,12 @@
 import Foundation
-@preconcurrency import RxCocoa
-@preconcurrency import RxSwift
+import RxCocoa
+import RxSwift
 
 @MainActor
 public extension Reactive where Base: ManualDateField {
 
+    /// Returns a Reactive control property which emits changes to the field's date and accepts new
+    /// dates.
     var date: ControlProperty<Date?> {
         let source = base.rx.text.map { [weak base] _ in
             MainActor.assumeIsolated { base?.date }

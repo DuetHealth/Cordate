@@ -110,9 +110,6 @@ public class ManualDateField: UITextField {
         MainActor.assumeIsolated { text.map { formatText($0) } ?? "" }
     }
 
-
-
-
     public override func drawText(in rect: CGRect) {
         let drawingRepresentation = generateDrawingRepresentation()
         let heightInset = (rect.size.height - drawingRepresentation.size().height) / 2
