@@ -1,7 +1,7 @@
 import Foundation
 import UIKit
 
-public struct CalendarStyle: @unchecked Sendable {
+public struct CalendarStyle {
 
     static func textColor(for color: UIColor) -> UIColor? {
         guard color != .clear else { return .black }

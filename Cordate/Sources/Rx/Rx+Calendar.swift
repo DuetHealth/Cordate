@@ -17,7 +17,7 @@ public extension Reactive where Base: CalendarDateSelectionController {
 
     /// Returns a sequence which emits explicit confirmations of the selected date.
     var selectedDate: ControlEvent<Date> {
-        let proxy = MainActor.assumeIsolated { base.delegate as? CalendarDelegateProxy } ?? installProxy()
+        let proxy = (base.delegate as? CalendarDelegateProxy) ?? installProxy()
         let source = proxy.rx.methodInvoked(#selector(CalendarDateSelectionControllerDelegate.calendarController(_:didSelectDate:)))
             .map { args in args[1] as! Date }
         return ControlEvent(events: source)
@@ -25,19 +25,17 @@ public extension Reactive where Base: CalendarDateSelectionController {
 
     /// Returns a sequence which emits explicit removals of the selected date.
     var clearedDate: ControlEvent<Void> {
-        let proxy = MainActor.assumeIsolated { base.delegate as? CalendarDelegateProxy } ?? installProxy()
+        let proxy = (base.delegate as? CalendarDelegateProxy) ?? installProxy()
         let source = proxy.rx.methodInvoked(#selector(CalendarDateSelectionControllerDelegate.calendarControllerClearedDate(_:)))
             .map { _ in () }
         return ControlEvent(events: source)
     }
 
     private func installProxy() -> CalendarDelegateProxy {
-        return MainActor.assumeIsolated {
-            let proxy = CalendarDelegateProxy(forwardedDelegate: base.delegate)
-            base.delegate = proxy
-            objc_setAssociatedObject(base, &delegateProxyKey, proxy, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
-            return proxy
-        }
+        let proxy = CalendarDelegateProxy(forwardedDelegate: base.delegate)
+        base.delegate = proxy
+        objc_setAssociatedObject(base, &delegateProxyKey, proxy, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
+        return proxy
     }
 
 }

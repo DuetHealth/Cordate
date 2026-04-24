@@ -9,10 +9,10 @@ public extension Reactive where Base: ManualDateField {
     /// dates.
     var date: ControlProperty<Date?> {
         let source = base.rx.text.map { [weak base] _ in
-            MainActor.assumeIsolated { base?.date }
+            base?.date
         }
         let sink = Binder<Date?>(base) { field, date in
-            MainActor.assumeIsolated { field.setDate(date) }
+            field.setDate(date)
         }
         return ControlProperty(values: source, valueSink: sink)
     }
