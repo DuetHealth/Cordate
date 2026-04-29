@@ -1,11 +1,6 @@
 import Foundation
 import UIKit
 
-fileprivate let defaultStyle: UIBlurEffect.Style = {
-    if #available(iOS 10.0, *) { return .regular }
-    return .light
-}()
-
 /// The `CalendarPresentationController` class is a subclass of `UIPresentationController` which
 /// provides default behaviors and styling for the `CalendarDateSelectionController`.
 public class CalendarPresentationController: UIPresentationController {
@@ -14,8 +9,7 @@ public class CalendarPresentationController: UIPresentationController {
     private let tapGestureRecognizer = UITapGestureRecognizer()
 
     /// The blur effect used by the overlay.
-    /// On iOS 10 and above, this defaults to `.regular`; on iOS 9, the default is `.light`.
-    public var blurEffect = UIBlurEffect(style: defaultStyle)
+    public var blurEffect = UIBlurEffect(style: .regular)
 
     /// Controls whether touches on the blur overlay trigger a dismissal.
     ///
@@ -73,4 +67,3 @@ public class CalendarPresentationController: UIPresentationController {
     }
 
 }
-

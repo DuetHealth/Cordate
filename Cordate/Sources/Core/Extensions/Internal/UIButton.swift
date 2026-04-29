@@ -1,14 +1,14 @@
 import Foundation
 import UIKit
 
-fileprivate var key = UInt8.max
+nonisolated(unsafe) fileprivate var key = UInt8.max
 
 extension UIButton {
 
     class Closure: NSObject {
-        let closure: () -> ()
+        let closure: @MainActor () -> ()
 
-        init(_ closure: @escaping () -> ()) {
+        init(_ closure: @escaping @MainActor () -> ()) {
             self.closure = closure
         }
     }
@@ -18,7 +18,7 @@ extension UIButton {
         closure.closure()
     }
 
-    func onTap(_ closure: @escaping () -> ()) {
+    func onTap(_ closure: @escaping @MainActor () -> ()) {
         objc_setAssociatedObject(self, &key, Closure(closure), .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
         addTarget(self, action: #selector(invoke), for: .touchUpInside)
     }

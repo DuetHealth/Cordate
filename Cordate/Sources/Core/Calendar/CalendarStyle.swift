@@ -20,7 +20,7 @@ public struct CalendarStyle {
     }
 
     /// Drives which buttons are shown on the calendar.
-    public enum ButtonConfiguration {
+    public enum ButtonConfiguration: Sendable {
 
         /// The calendar shows no buttons and produces values continuously.
         case none
@@ -28,7 +28,7 @@ public struct CalendarStyle {
         /// The calendar shows a confirmation button and only produces a value when it is pressed.
         case confirmationOnly
 
-        /// The calendar shows both a confirmation button and a clear button. 
+        /// The calendar shows both a confirmation button and a clear button.
         case all
 
     }
@@ -74,14 +74,8 @@ public struct CalendarStyle {
     /// The font for the calendar controls.
     public var calendarFont = UIFont.systemFont(ofSize: UIFont.systemFontSize)
 
-    private var _usesHaptics: Bool = true
-
     /// Controls whether selection events trigger haptic feedback.
-    @available(iOS 10.0, *)
-    public var usesHaptics: Bool {
-        get { return _usesHaptics }
-        set { _usesHaptics = newValue }
-    }
+    public var usesHaptics: Bool = true
 
     /// Controls which controls are provided by the calendar.
     public var buttonConfiguration = ButtonConfiguration.all

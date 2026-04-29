@@ -78,7 +78,7 @@ public class CalendarDateSelectionController: UIViewController {
     private var selectedMonth = Int?.none {
         didSet { selectedDay = nil }
     }
-    
+
     private var selectedDay = Int?.none
 
     /// Performs an initial layout pass in viewDidLayoutSubviews which prepares the collection view's
@@ -399,7 +399,7 @@ extension CalendarDateSelectionController: UICollectionViewDelegate {
     }
 
     public func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let generator = SelectionFeedbackGenerator()
+        let generator = UISelectionFeedbackGenerator()
         generator.prepare()
         switch currentComponent {
         case .year:
@@ -496,28 +496,4 @@ extension CalendarDateSelectionController: UIViewControllerTransitioningDelegate
 
 fileprivate func warn(_ message: String, _ function: String = #function, _ line: Int = #line) {
     print("\(CalendarDateSelectionController.self).\(function):\(line) WARN - \(message).")
-}
-
-fileprivate struct SelectionFeedbackGenerator {
-
-    private let generator: Any?
-
-    init() {
-        if #available(iOS 10.0, *) {
-            generator = UISelectionFeedbackGenerator()
-        } else { generator = nil }
-    }
-
-    func prepare() {
-        if #available(iOS 10.0, *) {
-            (generator as? UISelectionFeedbackGenerator)?.prepare()
-        }
-    }
-
-    func selectionChanged() {
-        if #available(iOS 10.0, *) {
-            (generator as? UISelectionFeedbackGenerator)?.selectionChanged()
-        }
-    }
-
 }

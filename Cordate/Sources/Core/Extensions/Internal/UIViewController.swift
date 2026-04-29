@@ -4,35 +4,19 @@ import UIKit
 extension UIViewController {
 
     var topAnchor: NSLayoutYAxisAnchor {
-        if #available(iOS 11.0, *) {
-            return view.safeAreaLayoutGuide.topAnchor
-        } else {
-            return topLayoutGuide.bottomAnchor
-        }
+        return view.safeAreaLayoutGuide.topAnchor
     }
 
     var leftAnchor: NSLayoutXAxisAnchor {
-        if #available(iOS 11.0, *) {
-            return view.safeAreaLayoutGuide.leftAnchor
-        } else {
-            return view.leftAnchor
-        }
+        return view.safeAreaLayoutGuide.leftAnchor
     }
 
     var bottomAnchor: NSLayoutYAxisAnchor {
-        if #available(iOS 11.0, *) {
-            return view.safeAreaLayoutGuide.bottomAnchor
-        } else {
-            return view.bottomAnchor
-        }
+        return view.safeAreaLayoutGuide.bottomAnchor
     }
 
     var rightAnchor: NSLayoutXAxisAnchor {
-        if #available(iOS 11.0, *) {
-            return view.safeAreaLayoutGuide.rightAnchor
-        } else {
-            return view.rightAnchor
-        }
+        return view.safeAreaLayoutGuide.rightAnchor
     }
 
 }

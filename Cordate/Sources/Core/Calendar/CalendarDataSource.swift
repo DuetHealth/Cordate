@@ -3,20 +3,11 @@ import UIKit
 
 public class CalendarDataSource {
 
-    public enum CalendarMode {
+    public enum CalendarMode: Sendable {
         case birthDate
-
-        var range: (minimum: Date?, maximum: Date?) {
-            switch self {
-            case .birthDate:
-                let maximum = Date().heart.local
-                let minimum = Date(day: 1, month: 1, year: maximum.heart.year - 150)
-                return (minimum, maximum)
-            }
-        }
     }
 
-    public struct Common {
+    public struct Common: Sendable {
 
         private static let formatter: DateFormatter = {
             let formatter = DateFormatter()
@@ -34,7 +25,7 @@ public class CalendarDataSource {
 
     }
 
-    public enum Component {
+    public enum Component: Sendable {
         case day(month: Int, year: Int)
         case month(year: Int)
         case year
@@ -47,13 +38,22 @@ public class CalendarDataSource {
         return minimumDate.heart.year...maximumDate.heart.year
     }
 
+    private static func modeRange(_ mode: CalendarMode) -> (minimum: Date?, maximum: Date?) {
+        switch mode {
+        case .birthDate:
+            let maximum = Date().heart.local
+            let minimum = Date(day: 1, month: 1, year: maximum.heart.year - 150)
+            return (minimum, maximum)
+        }
+    }
+
     public init(minimumDate: Date? = nil, maximumDate: Date? = nil) {
         self.minimumDate = minimumDate ?? Date.distantPast
         self.maximumDate = maximumDate ?? Date.distantFuture
     }
 
     public convenience init(mode: CalendarMode) {
-        let (minimum, maximum) = mode.range
+        let (minimum, maximum) = CalendarDataSource.modeRange(mode)
         self.init(minimumDate: minimum, maximumDate: maximum)
     }
 

@@ -2,7 +2,7 @@ import Foundation
 
 public extension ManualDateField {
 
-    enum Separator: String {
+    enum Separator: String, Sendable {
         case slash = "/"
         case dash = "-"
         case period = "."
